@@ -8,18 +8,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Busco Ayuda</title>
 </head>
 <body>
-    <h1 align="center">Galería</h1>
+<div class="well">
+    <h1>Busco Ayuda <small>Escoge tu candidato</small></h1>
         {% for imagen in lista_imagenes%}
             <div class="col-md-4 col-sm-6 col-lg-3 vell">
             {% if imagen.imageFile == None%}
                 <img class="img-responsive" src="{{imagen.url}}" width="400" height="300">
+                <h2> {{imagen.title}} </h2>
             {% else %}
                 <img class="img-responsive" src="{{imagen.imageFile}}" width="400" height="300">
             {% endif %}
             </div>
         {% endfor %}
+</div>
 </body>
 </html>
